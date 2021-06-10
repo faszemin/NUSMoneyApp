@@ -1,9 +1,17 @@
 const expressmodule = require("express");
 var axios = require('axios');
 
-router = expressmodule.Router();
+var app = expressmodule();
 
-router
+app.listen(8080, () => {
+  console.log("Server running on port 8080");
+ });
+
+ app.get("/", (req, res) => {
+  res.send(["Testing get all customer directly"]);
+ });
+
+app
 .get("/customer/all" , (request,response) =>{
     console.log("Get All Customer Mock API Called");
 
@@ -30,6 +38,3 @@ axios(config)
     
    
 });
-
-
-module.exports = {router};
