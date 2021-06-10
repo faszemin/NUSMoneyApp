@@ -19,6 +19,10 @@ Push Image to Docker Hub
 Run Image From Docker Hub 
 docker run -d -p 8082:8080 faszemin/nusmoneyapp
 
+Backend running in VM
+![image](https://user-images.githubusercontent.com/76104855/121564460-0da35580-ca4e-11eb-92fb-961152fe0f82.png)
+
+
 <u>Next Step</u>
 1) Containerize a Web Application and not just a backend function 
 2) Containerize DB Access
