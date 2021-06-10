@@ -1,23 +1,37 @@
 var selectedRow = null;
 var selectedRowId = null;
 //var cust_table_record = null;
+var raw = "";
 
 function getCustDataFromServer()
 {
     console.log("Get Cust Data From Server");
+    var myHeaders = new Headers();
+    myHeaders.append("Content-Type", "application/json");
+
     var requestOptions = {
       method: "GET",
+      headers: myHeaders
     };
 
     fetch("http://localhost:3000/customer/all", requestOptions)
     .then((response) => response.json())
     .then((data) => {
-      console.log("In fetch method");
-   
+      console.log("In fetch method - Print Data");
+        console.log(data);
       var table = document.getElementById("customerList").getElementsByTagName('tbody')[0];
+      console.log(typeof(data));
+        /*
+      var obj = eval('(' + data + ')');
+            var res = [];
+              
+            for(var i in obj)
+                res.push(obj[i]);
+              
+*/
 
-      
-   
+
+
       data.forEach(function (item) { 
         var newRow = table.insertRow(table.length);
         newRow.id = item.cust_id;
