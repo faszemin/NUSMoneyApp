@@ -1,6 +1,8 @@
 # NUSMoneyApp
 Application will use postman to receive mock data - nodejs axios module is used to connect with postman end point. 
 
+Creating a conflict to test merging conflict
+
 ![image](https://user-images.githubusercontent.com/76104855/121558162-fe210e00-ca47-11eb-8cb2-bc7b162b4dc0.png)
 
 Populating a Dockerfile - Building Container
